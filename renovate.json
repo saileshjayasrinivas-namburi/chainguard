@@ -1,0 +1,21 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:base"
+  ],
+  "enabledManagers": ["dockerfile", "docker-compose"],
+  "docker": {
+    "enabled": true,
+    "registryUrls": ["https://index.docker.io"]
+  },
+  "packageRules": [
+    {
+      "matchDatasources": ["docker"],
+      "matchPackagePatterns": ["saileshjayasrinivas/otel"],
+      "groupName": "otel images"
+    }
+  ],
+  "prHourlyLimit": 2,
+  "prConcurrentLimit": 5,
+  "automerge": false
+}
