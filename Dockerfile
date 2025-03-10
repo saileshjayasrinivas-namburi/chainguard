@@ -1,0 +1,1 @@
+FROM saileshjayasrinivas/otel:nodejs
